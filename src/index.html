@@ -4,19 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>GOIT HW 11</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="node_modules/simplelightbox/dist/simple-lightbox.min.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+  <main>
+  <form class="search-form" id="search-form">
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search images..."
+        autocomplete="off"
+      />
+      <button type="submit" class="search-button">Search</button>
+    </div>
+  </form>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+  <!-- Loader -->
+  <div class="loader-wrapper" id="loader">
+    <p class="loading-text">Loading images, please wait...</p>
+    <div class="loader"></div>
+  </div>
 
-    <load src="./partials/footer.html" />
+  <!-- Gallery -->
+  <ul class="gallery" id="gallery"></ul>
+</main>
 
     <script type="module" src="./main.js"></script>
   </body>
